@@ -1,4 +1,11 @@
+using Api.Database;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var services = builder.Services;
+var Configuration = builder.Configuration;
+IServiceCollection serviceCollection = services.AddDbContext<MyDBContext>(options => options.UseMySQL(Configuration.GetConnectionString("Default")));
 
 // Add services to the container.
 
