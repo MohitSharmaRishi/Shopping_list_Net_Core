@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Api.Models
 {
-    public class List
+    public class ListedProduct
     {
         [Key]
         public int LID { get; set; }
@@ -15,18 +15,8 @@ namespace Api.Models
         [Required]
         public int PID { get; set; }
 
-        [NotMapped]
-        public string ProductName { get; set; } = "";
-
-        [NotMapped]
-        public float Price { get; set; }
-
-        [NotMapped]
-        public string Type { get; set; }
-
-        [NotMapped]
-        public string Category { get; set; } = "Default";
-
+        [Required]
+        public int AddedBy { get; set; } = 1;
 
         [Required]
         public string Status { get; set; } = "Pending";

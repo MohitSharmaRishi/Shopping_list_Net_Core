@@ -21,17 +21,24 @@ namespace Api.Models
         public string Mobile { get; set; }
         public string UserType { get; set; }
 
-        public string Address { get; set; }
+        //public string Address { get; set; }
 
-        [NotMapped]
-        public string GUID { get; set; }
-        [NotMapped]
-        public DateTime? DOB { get; set; }
+        //[NotMapped]
+        //public string GUID { get; set; }
+        //[NotMapped]
+        //public DateTime? DOB { get; set; }
 
-        [NotMapped]
-        public bool IsVerified { get; set; } = false;
-        public string Status { get; set; } = "Pending";
+        //[NotMapped]
+        //public bool IsVerified { get; set; } = false;
+        //public string Status { get; set; } = "Pending";
        
 
+    }
+    public class creds {
+
+        public string Email { get; set; }
+
+        
+        public string PWD { get; set; }
     }
 }

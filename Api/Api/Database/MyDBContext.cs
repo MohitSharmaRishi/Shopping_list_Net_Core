@@ -15,7 +15,9 @@ namespace Api.Database
 
         }
         public DbSet<User> Users { get; set; }
-       
+        public DbSet<ListedProduct>  ListedProducts{ get; set; }
+        public DbSet<Product> Products { get; set; }
+
 
     }
 }
